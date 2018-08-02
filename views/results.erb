@@ -26,7 +26,6 @@
 <li><%= @person_skin %></li>
 </ul>
 
-<%= @notfound %>
 
 <ul>
 <li><%= @starship_name %></li>
@@ -42,7 +41,32 @@
 <li><%= @starship_MGLT %></li>
 <li><%= @starship_starship_class %></li>
 </ul>
-<%= @all_people %>
-<%= @all_films %>
+
+<% if @all_people != nil %>
+<% @all_people.each do |person| %>
+    <ul>
+    <li><%= "Name: " + person["name"].to_s %></li>
+    <li><%= "Height: " + person["height"].to_s %></li>
+    <li><%= "Mass: " + person["mass"].to_s %></li>
+    <li><%= "Hair Color: " + person["hair_color"].to_s %></li>
+    <li><%= "Birth Year: " + person["birth_year"].to_s %></li>
+    <li><%= "Gender: " + person["gender"].to_s %></li>
+    <li><%= "Eye Color: " + person["eye_color"].to_s %></li>
+    <li><%= "Skin Color: " + person["skin_color"].to_s %></li>
+    </ul>
+<% end %>
+<% end %>
+
+<% if @all_films != nil %>
+<% @all_films.each do |film| %>
+    <ul>
+    <li><%= "Title: " + film["title"].to_s %></li>
+    <li><%= "Opening Crawl: " + film["opening_crawl"].to_s %></li>
+    <li><%= "Director: " + film["director"].to_s %></li>
+    <li><%= "Producer: " + film["producer"].to_s %></li>
+    <li><%= "Release Date: " + film["release_date"].to_s %></li>
+    </ul>
+<% end %>
+<% end %>
 </div>
 </div>

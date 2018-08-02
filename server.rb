@@ -21,7 +21,7 @@ post '/searchapi' do
         @id = params[:search_query].to_i
         @starship_by_id = Swapir.find_starship(@id)
         @starship_name = "Name: " + @starship_by_id["name"].to_s
-        @starship_model = "ID: " + @starship_by_id["model"].to_s
+        @starship_model = "Model: " + @starship_by_id["model"].to_s
         @starship_manufacturer = "Manufacturer: " + @starship_by_id["manufacturer"].to_s
         @starship_cost_in_credits = "Cost in credits: " + @starship_by_id["cost_in_credits"].to_s
         @starship_length = "Length: " + @starship_by_id["length"].to_s
@@ -33,7 +33,17 @@ post '/searchapi' do
         @starship_MGLT = "MGLT: " + @starship_by_id["MGLT"].to_s
         @starship_starship_class = "Starship class: " + @starship_by_id["starship_class"].to_s
     elsif params[:yer] == "all-people"
-        @all_people = Swapir.get_all_people()
+        @all_people = Swapir.get_all_people() 
+        # @all_people.each do |person|
+        #     @name = "Name: " + person["name"].to_s
+        #     @height = "Height: " + person["height"].to_s
+        #     @mass = "Mass: " + person["mass"].to_s
+        #     @hair = "Hair Color: " + person["hair_color"].to_s
+        #     @birthday = "Birth Year: " + person["birth_year"].to_s
+        #     @gender = "Gender: " + person["gender"].to_s
+        #     @eye = "Eye Color: " + person["eye_color"].to_s
+        #     @skin = "Skin Color: " + person["skin_color"].to_s
+        # end
     elsif params[:yer] == "all-films"
         @all_films = Swapir.get_all_films()
     end
