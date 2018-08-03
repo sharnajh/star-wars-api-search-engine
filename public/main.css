@@ -17,6 +17,7 @@ h1 {
     color:white;
     text-align: center;
     font-size:40px;
+    margin: 10px;
 }
 
 h2 {
@@ -24,6 +25,7 @@ h2 {
     text-align:center;
     opacity:0.5;
     font-style:italic;
+    margin: 10px;
 }
 
 .wrapper {
@@ -32,7 +34,6 @@ h2 {
     display:flex;
     justify-content: center;
     align-items:center;
-    align-content: center;
 }
 
 .results-wrapper {
@@ -42,18 +43,16 @@ h2 {
     flex-direction:column;
     justify-content: center;
     align-items:center;
-    align-content: center;
 }
 
 input[type=number] {
-    width:50vw;
+    width:35vw;
     height:40px;
     border-radius:30px;
     border:none;
     text-indent: 20px;
     font-size:20px;
     margin:10px;
-    margin-top:0;
     transform: translateY(1px);
 }
 
