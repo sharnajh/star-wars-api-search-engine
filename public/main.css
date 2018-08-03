@@ -43,10 +43,11 @@ h2 {
     flex-direction:column;
     justify-content: center;
     align-items:center;
+    align-content:center;
 }
 
 input[type=number] {
-    width:35vw;
+    width:20vw;
     height:40px;
     border-radius:30px;
     border:none;
@@ -68,6 +69,10 @@ input[type=submit] {
     margin:10px;
     font-size:15px;
     transition:0.2s;
+}
+
+form {
+    text-align:center;
 }
 
 input[type=submit]:hover {
